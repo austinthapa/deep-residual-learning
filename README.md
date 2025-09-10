@@ -19,4 +19,16 @@ With the introduction of ResNet, the skip connections allow gradient to flow dir
 - 3x3 process features
 - Last 1x1 restores dimensions
 - Used in ResNet-50/101/152 to keep computations manageable.
-  
+
+
+The core equation for a ResNet residual block is:
+
+$$H(x) = F(x) + x$$
+
+The derivative of the loss function is:
+
+$$\frac{\partial L}{\partial x} = \frac{\partial L}{\partial H} \frac{\partial H}{\partial x}$$
+
+$$\frac{\partial L}{\partial x} = \frac{\partial L}{\partial H} \frac{\partial \left(F(x) + x\right)}{\partial x}$$
+
+$$\frac{\partial L}{\partial x} = \frac{\partial L}{\partial H} \left( \frac{\partial F(x)}{\partial x} + 1 \right)$$
