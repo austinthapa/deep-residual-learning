@@ -1,0 +1,8 @@
+# Virtual Environment
+resnet-venv
+
+# Notebook Checkpoints
+.ipynb*
+
+# data
+data
